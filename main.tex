@@ -1,0 +1,77 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{calc}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{newtxmath}
+\usepackage{newtxtext}
+\usepackage{tabularx}
+\usepackage{soul}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\definecolor{marianopolisgreen}{HTML}{124311}
+
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0pt}
+\graphicspath{{./}{./media/}}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=marianopolisgreen,
+  citecolor=marianopolisgreen,
+  urlcolor=marianopolisgreen
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Marianopolis Research Team}
+\rhead{Supercooling of Apples and Grapes}
+\cfoot{\thepage}
+
+\titleformat{\section}[block]
+  {\Large\bfseries\color{marianopolisgreen}}
+  {\thesection}{0.75em}{}
+  [\vspace{0.25em}\color{marianopolisgreen}\rule{\textwidth}{0.8pt}]
+
+\titleformat{\subsection}[block]
+  {\large\bfseries\color{marianopolisgreen}}
+  {\thesubsection}{0.75em}{}
+
+\let\OriginalIncludeGraphics\includegraphics
+\renewcommand{\includegraphics}[2][]{%
+  \IfFileExists{#2}{\OriginalIncludeGraphics[#1]{#2}}{%
+    \fbox{\parbox[c][2.75cm][c]{0.9\linewidth}{\centering Missing figure: #2}}%
+  }%
+}
+
+\providecommand{\tightlist}{}
+
+\newtcolorbox{editorialnote}[1]{%
+  colback=marianopolisgreen!4,
+  colframe=marianopolisgreen!85!black,
+  boxrule=0.8pt,
+  arc=1.5mm,
+  breakable,
+  enhanced,
+  fonttitle=\bfseries\color{marianopolisgreen},
+  title=#1
+}
+
+\begin{document}
+\input{paper.tex}
+\end{document}

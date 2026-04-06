@@ -1,0 +1,23 @@
+# LaTeX build output
+build/
+
+# LaTeX intermediates
+*.aux
+*.bcf
+*.blg
+*.bbl
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.xdv
+
+# macOS
+.DS_Store
