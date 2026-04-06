@@ -8,7 +8,7 @@
         "--keep-logs",
         "--keep-intermediates",
         "--outdir=%OUTDIR%",
-        "%DOC%"
+        "%DOC%.tex"
       ]
     }
   ],
