@@ -27,8 +27,10 @@
 
 \setlength{\headheight}{14pt}
 \setlength{\parindent}{1.25em}
-\setlength{\parskip}{0pt}
+\setlength{\parskip}{4pt plus 1pt minus 1pt}
 \graphicspath{{./}{./figures/}}
+\captionsetup[figure]{justification=centering,singlelinecheck=false}
+\captionsetup[table]{justification=centering,singlelinecheck=false}
 
 \hypersetup{
   colorlinks=true,
@@ -46,7 +48,7 @@
 \titleformat{\section}[block]
   {\Large\bfseries\color{marianopolisgreen}}
   {\thesection}{0.75em}{}
-  [\vspace{0.25em}\color{marianopolisgreen}\rule{\textwidth}{0.8pt}]
+  [\vspace{0.25em}\color{marianopolisgreen}\rule{\columnwidth}{0.8pt}]
 
 \titleformat{\subsection}[block]
   {\large\bfseries\color{marianopolisgreen}}
